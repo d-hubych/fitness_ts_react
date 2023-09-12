@@ -4,14 +4,15 @@ import Logo from '@/assets/Logo.png';
 import Link from './Link';
 import { SelectedPage } from '@/types';
 import useMediaQuery from '@/hooks/useMediaQuery';
+import ActionButton from '../actionButton/ActionButton';
 
 
 type Props = {
   selectedPage: SelectedPage;
-  setSelctedPage: Dispatch<SetStateAction<SelectedPage>>;
+  setSelectedPage: Dispatch<SetStateAction<SelectedPage>>;
 }
 
-const Navbar: FC<Props> = ({ selectedPage, setSelctedPage }) => {
+const Navbar: FC<Props> = ({ selectedPage, setSelectedPage }) => {
   const flexBetween = 'flex items-center justify-between';
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
@@ -32,27 +33,27 @@ const Navbar: FC<Props> = ({ selectedPage, setSelctedPage }) => {
                 <Link
                   page='Home'
                   selectedPage={ selectedPage }
-                  setSelctedPage={ setSelctedPage }
+                  setSelectedPage={ setSelectedPage }
                 />
                 <Link
                   page='Benefits'
                   selectedPage={ selectedPage }
-                  setSelctedPage={ setSelctedPage }
+                  setSelectedPage={ setSelectedPage }
                 />
                 <Link
                   page='Our Classes'
                   selectedPage={ selectedPage }
-                  setSelctedPage={ setSelctedPage }
+                  setSelectedPage={ setSelectedPage }
                 />
                 <Link
                   page='Contact Us'
                   selectedPage={ selectedPage }
-                  setSelctedPage={ setSelctedPage }
+                  setSelectedPage={ setSelectedPage }
                 />
               </div>
               <div className={`${flexBetween} gap-8`}>
                 <p>Sign In</p>
-                <button>Become a member</button>
+                <ActionButton children="Become a Member" setSelectedPage={ setSelectedPage } />
               </div>
               </div>
             ) : (

@@ -6,13 +6,13 @@ import { SelectedPage } from '@/types';
 type Props = {
   page: string;
   selectedPage: SelectedPage;
-  setSelctedPage: Dispatch<SetStateAction<SelectedPage>>;
+  setSelectedPage: Dispatch<SetStateAction<SelectedPage>>;
 }
 
 const Link: FC<Props> = ({
   page,
   selectedPage,
-  setSelctedPage,
+  setSelectedPage,
 }) => {
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
 
@@ -22,7 +22,7 @@ const Link: FC<Props> = ({
         ? 'text-primary-500'
         : 'transition duration-500 hover:text-primary-300' }`}
       href={`#${lowerCasePage}`}
-      onClick={() => setSelctedPage(lowerCasePage)}
+      onClick={() => setSelectedPage(lowerCasePage)}
     >
       { page }
     </AnchorLink>
