@@ -1,11 +1,12 @@
-import { FC } from 'react';
+import { FC, Dispatch, SetStateAction } from 'react';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 // import cn from 'classnames';
+import { SelectedPage } from '@/types';
 
 type Props = {
   page: string;
-  selectedPage: string;
-  setSelctedPage: (vlue: string) => void;
+  selectedPage: SelectedPage;
+  setSelctedPage: Dispatch<SetStateAction<SelectedPage>>;
 }
 
 const Link: FC<Props> = ({
@@ -13,7 +14,7 @@ const Link: FC<Props> = ({
   selectedPage,
   setSelctedPage,
 }) => {
-  const lowerCasePage = page.toLowerCase().replace(/ /g, "");
+  const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
 
   return (
     <AnchorLink
