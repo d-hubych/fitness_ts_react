@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import Navbar from "@/components/navbar/Navbar";
 import { SelectedPage } from './types';
+import Navbar from "@/components/navbar/Navbar";
+import Home from '@/components/home/Home';
 
 function App() {
  const [selectedPage, setSelectedPage]
@@ -28,6 +29,7 @@ function App() {
           selectedPage={ selectedPage }
           setSelectedPage={ setSelectedPage }
         />
+        <Home setSelectedPage={ setSelectedPage } />
         <div className="h-[3000px]"></div> // just for test navbar-fixed
       </div>
   )
