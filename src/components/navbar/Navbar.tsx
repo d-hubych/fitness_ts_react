@@ -58,7 +58,7 @@ const Navbar: FC<Props> = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               </div>
               <div className={`${flexBetween} gap-8`}>
                 <p>Sign In</p>
-                <ActionButton children="Become a Member" setSelectedPage={ setSelectedPage } />
+                <ActionButton buttonName="Become a Member" setSelectedPage={ setSelectedPage } />
               </div>
               </div>
             ) : (

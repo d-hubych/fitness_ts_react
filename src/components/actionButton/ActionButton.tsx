@@ -3,11 +3,11 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { SelectedPage } from '@/types';
 
 type Props = {
-  children: ReactNode;
+  buttonName: ReactNode;
   setSelectedPage: Dispatch<SetStateAction<SelectedPage>>;
 }
 
-const ActionButton: FC<Props> = ({ children, setSelectedPage }) => {
+const ActionButton: FC<Props> = ({ buttonName, setSelectedPage }) => {
   return (
     <AnchorLink
       className="
@@ -21,7 +21,7 @@ const ActionButton: FC<Props> = ({ children, setSelectedPage }) => {
       href={`#${SelectedPage.ContactUs}`}
 
     >
-      { children }
+      { buttonName }
     </AnchorLink>
   )
 } 

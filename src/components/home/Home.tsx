@@ -1,13 +1,14 @@
 import { FC } from 'react';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import { SelectedPage } from '@/types';
-import ActionButton from '@/actionButton/ActionButton';
+import ActionButton from '../actionButton/ActionButton';
 
 import HomePageText from '@/assets/HomePageText.png';
 import HomePageGraphic from '@/assets/HomePageGraphic.png';
 import SponsorRedBull from '@/assets/SponsorRedBull.png';
 import SponsorForbes from '@/assets/SponsorForbes.png';
 import SponsorFortune from '@/assets/SponsorFortune.png';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 type Props = {
   setSelectedPage: Dispatch<SetStateAction<SelectedPage>>;
@@ -19,9 +20,65 @@ const Home: FC<Props> = ({ setSelectedPage }) => {
   return (
     <section 
       id='home'
-      className="gap-16 bg-gray-20 py-10 mb:h-full md:pb-0"
+      className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0"
     >
+      {/* IMAGE AND MAIN HEADER */}
+      <div 
+        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+      >
 
+        {/* MAIN HEADER */}
+        <div 
+          className="z-10 mt-32 md:basis-3/5"
+        >
+
+          {/* HEADINGS */}
+          <div className="md:-mt-20">
+            <div className='relative'>
+              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
+                <img src={HomePageText} alt="home-page-text" />
+              </div>
+            </div>
+
+            <p>
+              Unrivaled Gym. Unparalleled Training Fitness Classes. World Class Studios to get the Body Shapes That you Dream of.. Get Your Dream Body Now.
+            </p>
+          </div>
+
+          {/* ACTIONS */}
+          <div>
+            <ActionButton
+              buttonName="Join Now"
+              setSelectedPage={setSelectedPage}
+            />
+            <AnchorLink
+              className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
+              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
+              href={`#${SelectedPage.ContactUs}`}
+            >
+              <p>Learn More</p>
+            </AnchorLink>
+          </div>
+        </div>
+
+        {/* IMAGE */}
+        <div>
+          <img src={HomePageGraphic} alt="home-page-graphic" />
+        </div>
+      </div>
+
+        {/* SPONSORS */}
+        {isAboveMediumScreens && (
+          <div>
+            <div>
+              <div>
+                <img src={SponsorRedBull} alt="Sponso-RedBull" />
+                <img src={SponsorForbes} alt="Sponso-Forbes" />
+                <img src={SponsorFortune} alt="Sponso-Fortune" />
+              </div>
+            </div>
+          </div>
+        )}
     </section>
   )
 }
