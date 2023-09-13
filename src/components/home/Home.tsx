@@ -40,13 +40,13 @@ const Home: FC<Props> = ({ setSelectedPage }) => {
               </div>
             </div>
 
-            <p>
+            <p className="mt-8 text-sm">
               Unrivaled Gym. Unparalleled Training Fitness Classes. World Class Studios to get the Body Shapes That you Dream of.. Get Your Dream Body Now.
             </p>
           </div>
 
           {/* ACTIONS */}
-          <div>
+          <div className='mt-8 flex items-center gap-8'>
             <ActionButton
               buttonName="Join Now"
               setSelectedPage={setSelectedPage}
@@ -56,22 +56,24 @@ const Home: FC<Props> = ({ setSelectedPage }) => {
               onClick={() => setSelectedPage(SelectedPage.ContactUs)}
               href={`#${SelectedPage.ContactUs}`}
             >
-              <p>Learn More</p>
+              <p>
+                Learn More
+              </p>
             </AnchorLink>
           </div>
         </div>
 
         {/* IMAGE */}
-        <div>
+        <div className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end'>
           <img src={HomePageGraphic} alt="home-page-graphic" />
         </div>
       </div>
 
         {/* SPONSORS */}
         {isAboveMediumScreens && (
-          <div>
-            <div>
-              <div>
+          <div className='h-[150px] w-full bg-primary-100 py-10'>
+            <div className='mx-auto w-5/6'>
+              <div className='flex w-3/5 items-center justify-between gap-8'>
                 <img src={SponsorRedBull} alt="Sponso-RedBull" />
                 <img src={SponsorForbes} alt="Sponso-Forbes" />
                 <img src={SponsorFortune} alt="Sponso-Fortune" />
