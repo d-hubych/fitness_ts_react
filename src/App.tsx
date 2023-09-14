@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { SelectedPage } from './types';
 import Navbar from "@/components/navbar/Navbar";
 import Home from '@/components/home/Home';
+import Benefits from '@/components/benefits/Benefits';
 
 function App() {
  const [selectedPage, setSelectedPage]
@@ -30,6 +31,7 @@ function App() {
           setSelectedPage={ setSelectedPage }
         />
         <Home setSelectedPage={ setSelectedPage } />
+        <Benefits setSelectedPage={ setSelectedPage } />
         <div className="h-[3000px]"></div> // just for test navbar-fixed
       </div>
   )
