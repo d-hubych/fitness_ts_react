@@ -7,6 +7,7 @@ import {
   AcademicCapIcon,
 } from '@heroicons/react/24/solid';
 import HText from '../hText/HText';
+import EachBenefit from './EachBenefit';
 
 const benefits: Array<BenefitType> = [
   {
@@ -50,7 +51,15 @@ const Benefits: FC<Props> = ({ setSelectedPage }) => {
 
         {/* BENEFITS */}
         <div className='md:flex items-center justify-between gap-8 mt-5'>
-          {/* {benefits.map(benefit =>)}  */}
+          {benefits.map(benefit => (
+            <EachBenefit
+              key={benefit.title}
+              icon={benefit.icon}
+              title={benefit.title}
+              description={benefit.description}
+              setSelectedPage={setSelectedPage}
+            />
+          ))} 
         </div>
       </motion.div>
     </section>
