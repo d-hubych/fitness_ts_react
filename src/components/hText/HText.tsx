@@ -1,13 +1,13 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 type Props = {
-  text: string;
+  children: string | React.ReactNode;
 }
 
-const HText: FC<Props> = ({ text }) => {
+const HText: FC<Props> = ({ children }) => {
   return (
     <h1 className='basis-3/5 font-montserrat text-3xl font-bold'>
-      {text}
+      {children}
     </h1>
   )
 }
