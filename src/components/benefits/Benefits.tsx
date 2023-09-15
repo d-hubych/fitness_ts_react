@@ -27,6 +27,13 @@ const benefits: Array<BenefitType> = [
   },
 ];
 
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 }
+  },
+}
+
 type Props = {
   setSelectedPage: Dispatch<SetStateAction<SelectedPage>>;
 }
@@ -42,15 +49,31 @@ const Benefits: FC<Props> = ({ setSelectedPage }) => {
 
       >
         {/* HEADER */}
-        <div className='md:my-5 md:w-3/5'>
+        <motion.div
+          className='md:my-5 md:w-3/5'
+          initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -200 },
+              visible: { opacity: 1, x: 0 },
+            }}
+        >
           <HText text="MORE THAN JUST GYM." />
           <p className='my-5 text-sm'>
             We provide world class fitness equipment, trainers and classes to get you to your ultimate fitness goals with ease. We provide true care into each and every member.
           </p>
-        </div>
+        </motion.div>
 
         {/* BENEFITS */}
-        <div className='md:flex items-center justify-between gap-8 mt-5'>
+        <motion.div
+          className='md:flex items-center justify-between gap-8 mt-5'
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+        >
           {benefits.map(benefit => (
             <EachBenefit
               key={benefit.title}
@@ -60,7 +83,7 @@ const Benefits: FC<Props> = ({ setSelectedPage }) => {
               setSelectedPage={setSelectedPage}
             />
           ))} 
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   )
