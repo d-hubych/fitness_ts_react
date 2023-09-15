@@ -3,6 +3,7 @@ import { SelectedPage } from './types';
 import Navbar from "@/components/navbar/Navbar";
 import Home from '@/components/home/Home';
 import Benefits from '@/components/benefits/Benefits';
+import OurClasses from './components/ourClasses/OurClasses';
 
 function App() {
  const [selectedPage, setSelectedPage]
@@ -32,7 +33,7 @@ function App() {
         />
         <Home setSelectedPage={ setSelectedPage } />
         <Benefits setSelectedPage={ setSelectedPage } />
-        <div className="h-[3000px]"></div> // just for test navbar-fixed
+        <OurClasses setSelectedPage={ setSelectedPage } />
       </div>
   )
 }
