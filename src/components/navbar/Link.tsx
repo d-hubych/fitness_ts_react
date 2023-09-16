@@ -1,6 +1,5 @@
 import { FC, Dispatch, SetStateAction } from 'react';
 import AnchorLink from "react-anchor-link-smooth-scroll";
-// import cn from 'classnames';
 import { SelectedPage } from '@/types';
 
 type Props = {
