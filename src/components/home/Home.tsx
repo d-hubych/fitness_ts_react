@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import { SelectedPage } from '@/types';
 import ActionButton from '../actionButton/ActionButton';
