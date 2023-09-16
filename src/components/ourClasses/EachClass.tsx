@@ -1,10 +1,5 @@
 import { ClassType } from "@/types";
 
-// type Props = {
-//   name
-// description
-// image
-// }
 const overlayStyles = `
   absolute box-border p-5 z-30
   h-[380px] w-[450px]

@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Home from '@/components/home/Home';
 import Benefits from '@/components/benefits/Benefits';
 import OurClasses from './components/ourClasses/OurClasses';
+import ContactUs from './components/contactUs/ContactUs';
 
 function App() {
  const [selectedPage, setSelectedPage]
@@ -34,6 +35,7 @@ function App() {
         <Home setSelectedPage={ setSelectedPage } />
         <Benefits setSelectedPage={ setSelectedPage } />
         <OurClasses setSelectedPage={ setSelectedPage } />
+        <ContactUs setSelectedPage={ setSelectedPage } />
       </div>
   )
 }
