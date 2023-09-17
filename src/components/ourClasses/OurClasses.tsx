@@ -59,7 +59,7 @@ const OurClasses: FC<Props> = ({ setSelectedPage }) => {
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
+          transition={{ duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
@@ -74,7 +74,7 @@ const OurClasses: FC<Props> = ({ setSelectedPage }) => {
           </div>
         </motion.div>
 
-        <div className="mt-10 h-[353px] w-full overflow-y-hidden">
+        <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
           <ul className="w-[2800px] whitespace-nowrap">
             {classes.map((item: ClassType, i) => (
               <EachClass
