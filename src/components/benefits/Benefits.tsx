@@ -129,7 +129,7 @@ const Benefits: FC<Props> = ({ setSelectedPage }) => {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.3, duration: 0.5 }}
               variants={{
-                hidden: { opacity: 0, x: 50 },
+                hidden: { opacity: 0, x: -100 },
                 visible: { opacity: 1, x: 0 },
               }}
             >
