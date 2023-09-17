@@ -30,7 +30,7 @@ const Home: FC<Props> = ({ setSelectedPage }) => {
       >
 
         {/* MAIN HEADER */}
-        <div className="z-10 mt-32 md:basis-3/5">
+        <div className="z-10 mt-16 md:mt-32 md:basis-3/5">
 
           {/* HEADINGS */}
           <motion.div

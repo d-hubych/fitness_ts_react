@@ -29,7 +29,7 @@ const ContactUs: FC<Props> = ({ setSelectedPage }) => {
   return (
     <section
       id="contactus"
-      className="mx-auto w-5/6 pt-24 pb-32"
+      className="mx-auto w-5/6 pt-12 md:pt-24 pb-16 md:pb-32"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}

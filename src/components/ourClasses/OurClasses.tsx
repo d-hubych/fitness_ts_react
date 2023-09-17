@@ -49,7 +49,7 @@ const OurClasses: FC<Props> = ({ setSelectedPage }) => {
   return (
     <section
       id="ourclasses"
-      className="w-full bg-primary-100 py-40"
+      className="w-full bg-primary-100 py-10 md:py-40"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
@@ -61,7 +61,7 @@ const OurClasses: FC<Props> = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.3, duration: 0.5 }}
           variants={{
-            hidden: { opacity: 0, x: -200 },
+            hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
         >
