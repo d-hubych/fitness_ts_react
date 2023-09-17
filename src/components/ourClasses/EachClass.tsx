@@ -11,11 +11,11 @@ const EachClass = ({ name, description, image }: ClassType) => {
   return (
     <li className="relative mx-5 inline-block h-[380px] w-[450px]">
       <div className={overlayStyles}>
-        <p className="text-2xl">
+        <p className="text-2xl text-primary-100">
           {name}
         </p>
 
-        <p className="mt-5">
+        <p className="mt-5 text-primary-100">
           {description}
         </p>
       </div>
