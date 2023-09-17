@@ -21,16 +21,25 @@ const Footer: FC = () =>(
       <div className="mt-12 basis-1/4 md:mt-0">
         <h4 className="font-bold">Links</h4>
 
-        <AnchorLink href={`#${SelectedPage.ContactUs}`}>
-          <p className="my-5 transition duration-500 hover:text-primary-300">Massa orci senectus</p>
+        <AnchorLink
+          href={`#${SelectedPage.ContactUs}`}
+          className="block my-5 transition duration-500 hover:text-primary-300"
+        >
+          Massa orci senectus
         </AnchorLink>
 
-        <AnchorLink href={`#${SelectedPage.ContactUs}`}>
-          <p className="my-5 transition duration-500 hover:text-primary-300">Et gravida id et etiam</p>
+        <AnchorLink
+          href={`#${SelectedPage.ContactUs}`}
+          className="block my-5 transition duration-500 hover:text-primary-300"
+        >
+          Et gravida id et etiam
         </AnchorLink>
 
-        <AnchorLink href={`#${SelectedPage.ContactUs}`}>
-          <p className="my-5 transition duration-500 hover:text-primary-300">Ullamcorper vivamus</p>
+        <AnchorLink
+          href={`#${SelectedPage.ContactUs}`}
+          className="block my-5 transition duration-500 hover:text-primary-300"
+        >
+          Ullamcorper vivamus
         </AnchorLink>
       </div>
 
