@@ -6,7 +6,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const Footer: FC = () =>(
   <footer className="bg-primary-100 py-16">
     <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
-      <div className="mt-16 basis-1/2 md:mt-0">
+      <div className="basis-1/2 mt-0">
         <img src={Logo} alt="logo" />
 
         <p className="my-5">
@@ -18,7 +18,7 @@ const Footer: FC = () =>(
         </p>
       </div>
 
-      <div className="mt-16 basis-1/4 md:mt-0">
+      <div className="mt-12 basis-1/4 md:mt-0">
         <h4 className="font-bold">Links</h4>
 
         <AnchorLink href={`#${SelectedPage.ContactUs}`}>
@@ -34,7 +34,7 @@ const Footer: FC = () =>(
         </AnchorLink>
       </div>
 
-      <div>
+      <div className="mt-12 basis-1/4 md:mt-0">
         <span className="font-bold">Contact Us</span>
 
         <p className="my-5">Tempus metus mattis risus volutpat egestas.</p>
