@@ -29,7 +29,9 @@ const Navbar: FC<Props> = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
-            <img src={Logo} alt="logo" />
+            <a href="/">
+              <img src={Logo} alt="logo" />
+            </a>
             {/*LEFT SIDE /\ */}
             {/*RIGHT SIDE \/ */}
             {isAboveMediumScreens ? (
