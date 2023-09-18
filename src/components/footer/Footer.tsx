@@ -7,7 +7,9 @@ const Footer: FC = () =>(
   <footer className="bg-primary-100 py-16">
     <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
       <div className="basis-1/2 mt-0">
-        <img src={Logo} alt="logo" />
+        <AnchorLink href={`#${SelectedPage.Home}`}>
+          <img src={Logo} alt="logo" />
+        </AnchorLink>
 
         <p className="my-5">
           Lorem vitae ut augue auctor faucibus eget eget ut libero. Elementum purus et arcu massa dictum condimentum. Augue scelerisque iaculis orci ut habitant laoreet. Iaculis tristique.
